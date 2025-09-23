@@ -1,0 +1,42 @@
+.cart-container {
+  margin-top: 100px;
+  width: 100%;
+}
+.cart-container p {
+  font-size: 20px;
+  font-weight: 600px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+.cart-container p::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.8px;
+  background: rgba(255, 255, 255, 0.5);
+  bottom: -15px;
+  left: 0;
+}
+.cart-table {
+  margin-top: 30px;
+}
+.cart-table table {
+  width: 100%;
+  table-layout: fixed; /* chia đều các cột */
+}
+table th {
+  text-align: left;
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+table tr {
+  border-bottom: 1px solid rgb(11, 160, 60);
+}
+table td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: middle;
+}
+.bookTitle {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,74 @@
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 40px;
+  margin-top: 5rem;
+}
+
+.loader {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loader img {
+  width: 200px;
+}
+.loader p {
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+.phone-icon {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #057a44;
+  padding: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(6, 207, 90, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.phone-icon:hover {
+  background-color: #00fa9a;
+  transform: scale(1.1);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px;
+}
+.pagination span {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.pagination button {
+  background-color: #c7d4cf;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(16, 23, 29);
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+}
+.pagination button:hover {
+  color: #000000;
+  background-color: #00fa9a;
+}
+.pagination button:disabled {
+  background-color: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
+}

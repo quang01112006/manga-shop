@@ -1,0 +1,78 @@
+.detail-container {
+  padding: 2rem;
+  color: white;
+  font-family: "Merriweather", serif;
+}
+
+.btn-back {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #12728f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-back:hover {
+  background-color: #0ac46d;
+}
+
+.detail-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.detail-img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.detail-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #07d881;
+}
+
+.detail-synopsis {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn-cart {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-color: #12728f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.2s;
+}
+
+.btn-cart:hover {
+  background-color: #0ac46d;
+  transform: scale(1.05);
+}
