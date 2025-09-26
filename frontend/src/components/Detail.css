@@ -1,7 +1,7 @@
 .detail-container {
-  padding: 2rem;
+  padding-top: 6rem;
   color: white;
-  font-family: "Merriweather", serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn-back {
@@ -23,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .detail-img {
@@ -31,7 +31,7 @@
   height: 400px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .detail-info {
@@ -42,34 +42,19 @@
 }
 
 .detail-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
 }
 
 .detail-price {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #07d881;
 }
 
 .detail-synopsis {
-  font-size: 1rem;
+  font-size: 1.8rem;
   line-height: 1.6;
-}
-
-.btn-cart {
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  background-color: #12728f;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: 0.2s;
 }
 
 .btn-cart:hover {
