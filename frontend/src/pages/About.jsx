@@ -2,44 +2,52 @@ import "./About.css";
 
 export default function About() {
   return (
-    <section className="about">
-      <div className="about__card">
-        <h1 className="about__title">🔥 M4U — Manga For U</h1>
-        <p className="about__lead">
-          Welcome to <strong>M4U</strong> — your cozy spot for manga and good
-          vibes. Whether you're collecting, binge-reading, or just curious,
-          we've got something that’ll hook you.
-        </p>
+    <div className="about-container">
+      <h1>About M4U</h1>
 
-        <h2 className="about__subtitle">Why shop with M4U?</h2>
-
-        <ul className="about__list">
-          <li>
-            🚚 <strong>Free nationwide shipping</strong> — no surprise fees,
-            just more manga.
-          </li>
-          <li>
-            🎨 <strong>Massive selection</strong> — action, romance, horror,
-            comedy, slice of life… if it exists, we probably stock it.
-          </li>
-          <li>
-            💸 <strong>Friendly prices</strong> — big titles, fair deals.
-          </li>
-          <li>
-            🔄 <strong>Weekly restocks & new drops</strong> — never run out of
-            things to read.
-          </li>
-          <li>
-            🎁 <strong>Exclusive bundles & perks</strong> — members get the good
-            stuff.
-          </li>
-        </ul>
-
-        <p className="about__cta">
-          Click, grab, and get lost in a great story.{" "}
-          <strong>M4U — made for manga fans like you.</strong>
+      <div className="section">
+        <p className="question">What's M4U?</p>
+        <p className="answer">
+          M4U stands for "Manga For U". It's a site where you can explore and
+          discover tons of manga.
         </p>
       </div>
-    </section>
+      <hr />
+
+      <div className="section">
+        <p className="question">Who is it for?</p>
+        <p className="answer">
+          Anyone who loves manga or wants to find something new to read.
+          Beginners or fans, everyone is welcome.
+        </p>
+      </div>
+      <hr />
+
+      <div className="section">
+        <p className="question">What can I do here?</p>
+        <p className="answer">
+          You can browse different manga, check detailed info, see covers and
+          summaries, and organize your favorites.
+        </p>
+      </div>
+      <hr />
+
+      <div className="section">
+        <p className="question">Why use M4U?</p>
+        <p className="answer">
+          It's easy to navigate, updated often, and helps you discover manga you
+          might not find anywhere else.
+        </p>
+      </div>
+      <hr />
+
+      <div className="section">
+        <p className="question">How do I get started?</p>
+        <p className="answer">
+          Just scroll through the collection, click on any title to see more
+          details, and start exploring!
+        </p>
+      </div>
+    </div>
   );
 }

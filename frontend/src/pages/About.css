@@ -1,0 +1,32 @@
+.about-container {
+  max-width: 1100px;
+  margin-top: 60px;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+.about-container h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.section {
+  margin: 1rem 0;
+}
+
+.question {
+  color: rgb(53, 255, 53);
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.answer {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #706e6e;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+}
