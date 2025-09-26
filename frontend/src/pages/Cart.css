@@ -22,7 +22,7 @@
 }
 .cart-table table {
   width: 100%;
-  table-layout: fixed; /* chia đều các cột */
+  table-layout: fixed;
 }
 table th {
   text-align: left;
@@ -33,7 +33,7 @@ table tr {
   border-bottom: 1px solid rgb(11, 160, 60);
 }
 table td {
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: left;
   vertical-align: middle;
 }

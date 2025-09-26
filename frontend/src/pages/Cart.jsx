@@ -23,12 +23,7 @@ export default function Cart({ cartItems, removeFromCart }) {
                     <img src={item.cover} width="50" />
                   </td>
                   <td className="bookTitle">{item.title}</td>
-                  <input
-                    type="number"
-                    value={item.quantity}
-                    min="1"
-                    
-                  />
+                  <td className="bookQuantity">{item.quantity}</td>
                   <td className="bookPrice">
                     {item.price.toLocaleString("vi-VN")}₫
                   </td>

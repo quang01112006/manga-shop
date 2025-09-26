@@ -2,8 +2,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import About from "./pages/About";
+import Detail from "./components/Detail";
 import GenresPage from "./pages/GenresPage";
 import Navbar from "./components/Navbar";
+import "./App.css";
 import { useState } from "react";
 
 function App() {
@@ -12,17 +14,15 @@ function App() {
     setCartItems((prev) => {
       const exist = prev.find((item) => item.id === book.id);
       if (exist) {
-        // đã có → tăng số lượng
         return prev.map((item) =>
           item.id === book.id ? { ...item, quantity: item.quantity + 1 } : item
         );
       } else {
-        // chưa có → thêm mới với quantity = 1
         return [...prev, { ...book, quantity: 1 }];
       }
     });
   };
-  // Logic xóa sản phẩm
+
   const removeFromCart = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
@@ -30,7 +30,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
 
-      <div className="container">
+      <div className="app-container">
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
 
@@ -45,6 +45,7 @@ function App() {
             element={<GenresPage addToCart={addToCart} />}
           />
           <Route path="/about" element={<About />}></Route>
+          <Route path="/detail/:id" element={<Detail />} />
         </Routes>
       </div>
     </BrowserRouter>

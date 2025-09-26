@@ -9,6 +9,9 @@ export default function Home({ addToCart }) {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  function getPriceForBook(id) {
+    return 20000 + (id % 100) * 1000;
+  }
 
   useEffect(() => {
     async function load() {
@@ -23,7 +26,7 @@ export default function Home({ addToCart }) {
           id: item.mal_id,
           title: item.title,
           cover: item.images?.webp?.image_url ?? "",
-          price: (Math.floor(Math.random() * 180) + 20) * 1000,
+          price: getPriceForBook(item.mal_id),
         }));
         setBooks(mapped);
       } catch (err) {

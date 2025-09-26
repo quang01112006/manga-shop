@@ -1,7 +1,8 @@
-.container {
+.promo-container {
   display: flex;
-  width: 1100px;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 .box {
   display: flex;

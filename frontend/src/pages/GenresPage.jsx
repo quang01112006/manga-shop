@@ -1,11 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
+import "./GenresPage.css";
 
 export default function GenresPage({ addToCart }) {
   const { genreId } = useParams();
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  function getPriceForBook(id) {
+    return 20000 + (id % 100) * 1000;
+  }
 
   useEffect(() => {
     async function load() {
@@ -19,7 +24,7 @@ export default function GenresPage({ addToCart }) {
           id: item.mal_id,
           title: item.title,
           cover: item.images?.webp?.image_url ?? "",
-          price: (Math.floor(Math.random() * 180) + 20) * 1000,
+          price: getPriceForBook(item.mal_id),
         }));
         setBooks(mapped);
       } catch (err) {
@@ -29,20 +34,32 @@ export default function GenresPage({ addToCart }) {
       }
     }
     load();
-  }, [genreId]);
+  }, [genreId, currentPage]);
 
   return (
-    <div className="home-container">
+    <div>
       {loading ? (
         <div className="loader">
-          <img src="./images/loading.png" alt="" />
+          <img src="/images/loading.png" alt="" />
           <p>Loading...</p>
         </div>
       ) : (
-        books.map((b) => (
-          <ProductCard key={b.id} product={b} addToCart={addToCart} />
-        ))
+        <div className="genres-container">
+          {books.map((b) => (
+            <ProductCard key={b.id} product={b} addToCart={addToCart} />
+          ))}
+        </div>
       )}
+      <div className="genres-pagination">
+        <button
+          onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          Prev
+        </button>
+        <span>Page {currentPage}</span>
+        <button onClick={() => setCurrentPage((p) => p + 1)}>Next</button>
+      </div>
     </div>
   );
 }

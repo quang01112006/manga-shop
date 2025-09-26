@@ -8,7 +8,7 @@ export default function Hero() {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImg.length);
     }, 3000);
 
-    return () => clearInterval(intervalId); // ✅ clear đúng interval
+    return () => clearInterval(intervalId); // 
   }, []);
 
   return (

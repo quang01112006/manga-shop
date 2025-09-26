@@ -14,7 +14,7 @@ export default function Promo() {
   ];
 
   return (
-    <div className="container">
+    <div className="promo-container">
       {data.map((obj, i) => (
         <div className="box" key={i}>
           <div className="img-promo">

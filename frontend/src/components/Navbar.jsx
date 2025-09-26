@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       <nav>
-        <img className="logo" src="./images/logo.png"></img>
+        <img className="logo" src="/images/logo.png"></img>
         <ul>
           <li className="nav">
             <Link to="/">HOME</Link>
